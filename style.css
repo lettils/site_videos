@@ -1,0 +1,101 @@
+/* Resetando estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos gerais */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #5b0604;
+    color: #f8eeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #faf6f6;
+    margin-bottom: 30px;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  /* Galeria de vídeos */
+  .video-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .video-card {
+    position: relative;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(193, 5, 5, 0.991);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .video-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(184, 4, 4, 0.4);
+  }
+  
+  .video-player {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .video-card h3 {
+    text-align: center;
+    padding: 10px;
+    background-color: #8e0b0b;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  /* Efeitos de fade-in ao carregar a página */
+  .video-gallery {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  /* Barra de progresso personalizada */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: #ddd;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    border-radius: 5px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #007BFF;
+    border-radius: 5px;
+  }
+  
+  
