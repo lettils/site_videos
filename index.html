@@ -14,36 +14,40 @@
     </header>
     
     <div class="video-gallery">
-      <!-- Vídeo 1 (Usando iframe para o YouTube) -->
+      <!-- Vídeo 1 -->
       <div class="video-card">
-        <div class="video-wrapper">
-          <iframe class="video-player" id="video1" src="https://www.youtube.com/embed/o5wmNuP7Cvc?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
         <h3>Willy</h3>
+        <button class="watch-btn btn-1" onclick="showVideo('video1')">Assistir</button>
+        <div class="video-wrapper" id="video1" style="display: none;">
+          <iframe class="video-player" src="https://www.youtube.com/embed/o5wmNuP7Cvc?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
 
-      <!-- Vídeo 2 (Usando iframe para o YouTube) -->
+      <!-- Vídeo 2 -->
       <div class="video-card">
-        <div class="video-wrapper">
-          <iframe class="video-player" id="video2" src="https://www.youtube.com/embed/pA6OflrhYsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3>Salve</h3>
+        <button class="watch-btn btn-2" onclick="showVideo('video2')">Assistir</button>
+        <div class="video-wrapper" id="video2" style="display: none;">
+          <iframe class="video-player" src="https://www.youtube.com/embed/pA6OflrhYsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <h3>Salve </h3>
       </div>
 
-      <!-- Vídeo 3 (Usando iframe para o YouTube) -->
+      <!-- Vídeo 3 -->
       <div class="video-card">
-        <div class="video-wrapper">
-          <iframe class="video-player" id="video3" src="https://www.youtube.com/embed/dkQ9kPqsVl8?si=dpoUyQwWG3d1B3cV" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3>Você Parece com vergonha</h3>
+        <button class="watch-btn btn-3" onclick="showVideo('video3')">Assistir</button>
+        <div class="video-wrapper" id="video3" style="display: none;">
+          <iframe class="video-player" src="https://www.youtube.com/embed/dkQ9kPqsVl8?si=dpoUyQwWG3d1B3cV" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <h3>Voce Parece com vergonha </h3>
       </div>
 
-      <!-- Vídeo 4 (Usando iframe para o YouTube) -->
+      <!-- Vídeo 4 -->
       <div class="video-card">
-        <div class="video-wrapper">
-          <iframe class="video-player" id="video4" src="https://www.youtube.com/embed/7f4X7yweoXE?si=ldwrjGAamdclPmvn" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
         <h3>Piranha</h3>
+        <button class="watch-btn btn-4" onclick="showVideo('video4')">Assistir</button>
+        <div class="video-wrapper" id="video4" style="display: none;">
+          <iframe class="video-player" src="https://www.youtube.com/embed/7f4X7yweoXE?si=ldwrjGAamdclPmvn" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
     
@@ -53,5 +57,16 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    function showVideo(videoId) {
+      // Esconde todos os vídeos
+      const videos = document.querySelectorAll('.video-wrapper');
+      videos.forEach(video => video.style.display = 'none');
+      
+      // Exibe o vídeo específico
+      const videoToShow = document.getElementById(videoId);
+      videoToShow.style.display = 'block';
+    }
+  </script>
 </body>
 </html>
